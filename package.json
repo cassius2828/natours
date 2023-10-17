@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass sass/main.scss css/style.css -w"
-
   },
   "author": "Cassius Reynolds",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.69.3"
+  },
+  "dependencies": {
+    "tachyons": "^4.12.0"
   }
 }

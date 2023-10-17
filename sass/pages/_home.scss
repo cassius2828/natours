@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+.section-about {
+    background-color: $color-whitesmoke;
+    padding: 20rem;
+    margin-top: -20vh;
+}
+
+.section-features {
+    margin-top: -20vh;
+    padding: 20rem 2rem;
+      background-image: $gradient-primary,
+    url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+// clip-path: polygon(0 10%, 100% 0, 100% 80%, 0% 100%);
+ clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
+
+.section-tours {
+    margin-top: -20vh;
+    padding: 20rem 2rem 50rem 2rem;
+    background-color: $color-whitesmoke;
+    
+
+}

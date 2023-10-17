@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.row {
+  max-width: 114rem;
+  // background-color: $color-whitesmoke;
+  margin: $grid-margin;
+  font-size: $grid-font-size;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include clearfix;
+
+  .col {
+    @include rowStyles;
+    @include colGaps;
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$grid-gap}) / 2);
+  }
+  .col-1-of-3 {
+    width: calc((100% - #{$grid-gap} * 2) / 3);
+  }
+  .col-2-of-3 {
+    width: calc((100% - #{$grid-gap}) - ((100% - #{$grid-gap} * 2) / 3));
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - #{$grid-gap} * 3) / 4);
+  }
+  .col-2-of-4 {
+    width: calc((100% - #{$grid-gap}) / 2);
+  }
+  .col-3-of-4 {
+    width: calc((76.2% - #{$grid-gap} / 2));
+  }
+}

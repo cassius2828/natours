@@ -1,0 +1,48 @@
+
+// COLORS
+$color-primary: #3ee074;
+$color-primary-light: #70e75b;
+$color-primary-dark: #2ad79e;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+
+
+$color-grey-dark: #777;
+$color-grey-darker: #555555;
+$color-black: #000;
+$color-white: #fff;
+$color-whitesmoke: whitesmoke;
+
+
+$gradient-primary: linear-gradient(
+      135deg,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
+
+    $gradient-secondary: linear-gradient(
+      135deg,
+      rgba($color-secondary-light, 0.8),
+      rgba($color-secondary-dark, 0.8)
+    );
+
+    $gradient-tertiary: linear-gradient(
+      135deg,
+      rgba($color-tertiary-light, 0.8),
+      rgba($color-tertiary-dark, 0.8)
+    );
+
+// GRID
+$grid-width: 114rem;
+$grid-margin: 0 auto 8rem auto;
+$grid-gap: 6rem;
+$grid-font-size: 3rem;
+
+// FONT-SIZE
+$default-font-size: 1.6rem;

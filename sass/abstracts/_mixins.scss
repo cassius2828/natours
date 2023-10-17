@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin rowStyles {
+  float: left;
+}
+
+@mixin colGaps {
+  &:not(:last-child) {
+    margin-right: $grid-gap;
+  }
+}
+
+@mixin gradientBackgroundText {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@mixin flexboxColAlignCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

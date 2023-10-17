@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.feature-box {
+  border-radius: 3px;
+  padding: 2.5rem;
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  cursor: pointer;
+  transition: 0.2s all ease-out;
+
+  &__icon {
+    font-size: 6rem;
+    margin: 0.5rem;
+    @include gradientBackgroundText;
+  }
+
+  &__text {
+    font-weight: 700;
+    color: $color-grey-darker;
+    &--paragraph {
+      line-height: 2.5rem;
+      color: $color-grey-dark;
+
+      font-weight: 400;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-7.5%) scale(1.05);
+
+  }
+}
