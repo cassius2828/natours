@@ -1,0 +1,92 @@
+@use "../abstracts/" as *;
+
+.story {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.2);
+  background-color: rgba($color-white, .6);
+  border-radius: 3px;
+  padding: 8rem 8rem 8rem 11rem;
+ 
+  //   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  //   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  transform: skewX(-12deg);
+
+  .btn__square {
+    position: absolute;
+    left: 50%;
+  }
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    // first value is the border-radius, second values are the location, which we want in the middle
+    // so 50% 50%
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(45% at 50% 50%);
+    clip-path: circle(45% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+
+    &--img {
+      height: 100%;
+      transition: 0.2s all ease-out;
+      transform: scale(1.1);
+    }
+  }
+  &__text {
+    font-size: $default-font-size;
+
+    &--heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    &--paragraph {
+      line-height: 3rem;
+    }
+  }
+  &__caption {
+    @include absoluteCenter;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s all ease-out;
+    backface-visibility: hidden;
+  }
+  &:hover &__shape--img {
+    filter: blur(5px) brightness(80%);
+    transform: scale(1);
+  }
+  &:hover &__caption {
+    opacity: 1;
+    font-size: 1.7rem;
+  }
+}
+
+.section-stories__btn-container {
+  position: relative;
+  display: block;
+
+  .btn__square {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: 0.2s all ease-out;
+    &:hover {
+      transform: translate(-50%, -5%);
+    }
+    &:visited,
+    &:active {
+      transform: translate(-50%, 0);
+    }
+  }
+}

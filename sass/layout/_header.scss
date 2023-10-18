@@ -1,14 +1,13 @@
-@use '../abstracts' as *;
-
+@use "../abstracts" as *;
 
 .header {
   position: relative;
   height: 95vh;
   width: 100%;
-  background-image: $gradient-primary,
-    url("../img/hero.jpg");
+  background-image: $gradient-primary, url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
   /* LOGO */

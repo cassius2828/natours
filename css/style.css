@@ -148,6 +148,10 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+.btn--gradient {
+  background: linear-gradient(135deg, rgba(112, 231, 91, 0.8), rgba(42, 215, 158, 0.8));
+  color: #fff;
+}
 .btn--white {
   background-color: #fff;
   color: #777;
@@ -167,23 +171,48 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-.learn-more-btn:link, .learn-more-btn:visited {
-  color: #3ee074;
+.btn__square {
   display: inline-block;
+  position: relative;
+  text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 1px solid #3ee074;
-  padding: 4px;
-  font-size: 1.6rem;
-  transition: 0.15s all ease-in-out;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 1.75rem;
+  top: 6rem;
+  font-size: 2rem;
+  border-bottom: solid 2px #3ee074;
+  cursor: pointer;
+  transition: 0.2s all ease-out;
 }
-.learn-more-btn:hover {
+.btn__square--green {
+  background-color: transparent;
+  color: #3ee074;
+}
+.btn__square--green:hover {
+  transform: translateY(-5%);
   background-color: #3ee074;
   color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  transform: translateY(-5%);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
-.learn-more-btn:active {
+.btn__square--green:active, .btn__square--green:visited {
   transform: translateY(0);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card {
@@ -389,6 +418,7 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 0.2s all ease-out;
+  min-height: 30rem;
 }
 .feature-box__icon {
   font-size: 6rem;
@@ -410,6 +440,88 @@ body {
   transform: translateY(-7.5%) scale(1.05);
 }
 
+.story {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 8rem 8rem 8rem 11rem;
+  transform: skewX(-12deg);
+}
+.story .btn__square {
+  position: absolute;
+  left: 50%;
+}
+.story > * {
+  transform: skewX(12deg);
+}
+.story__shape {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(45% at 50% 50%);
+  clip-path: circle(45% at 50% 50%);
+  transform: translateX(-3rem) skewX(12deg);
+}
+.story__shape--img {
+  height: 100%;
+  transition: 0.2s all ease-out;
+  transform: scale(1.1);
+}
+.story__text {
+  font-size: 1.6rem;
+}
+.story__text--heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.story__text--paragraph {
+  line-height: 3rem;
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0;
+  transition: 0.2s all ease-out;
+  backface-visibility: hidden;
+}
+.story:hover .story__shape--img {
+  filter: blur(5px) brightness(80%);
+  transform: scale(1);
+}
+.story:hover .story__caption {
+  opacity: 1;
+  font-size: 1.7rem;
+}
+
+.section-stories__btn-container {
+  position: relative;
+  display: block;
+}
+.section-stories__btn-container .btn__square {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: 0.2s all ease-out;
+}
+.section-stories__btn-container .btn__square:hover {
+  transform: translate(-50%, -5%);
+}
+.section-stories__btn-container .btn__square:visited, .section-stories__btn-container .btn__square:active {
+  transform: translate(-50%, 0);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -417,6 +529,7 @@ body {
   background-image: linear-gradient(135deg, rgba(112, 231, 91, 0.8), rgba(42, 215, 158, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   /* LOGO */
   /* heading */
@@ -491,9 +604,24 @@ body {
 }
 
 .section-tours {
+  position: relative;
   margin-top: -20vh;
-  padding: 20rem 2rem 50rem 2rem;
+  padding: 20rem 2rem;
   background-color: whitesmoke;
+}
+.section-tours .btn {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 87.5%;
+  animation: none;
+}
+
+.section-stories {
+  position: relative;
+  padding: 15rem 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
