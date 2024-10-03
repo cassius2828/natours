@@ -181,3 +181,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 50vh;
+    margin: 3rem 0;
+
+    &__side {
+      min-height: 50vh;
+    }
+  }
+}

@@ -16,7 +16,6 @@
     z-index: 101;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     cursor: pointer;
-
   }
   &__bg {
     height: 6rem;
@@ -93,14 +92,14 @@
     opacity: 1;
     width: 100vw;
   }
-    &__checkbox:checked ~ &__btn &__burger {
+  &__checkbox:checked ~ &__btn &__burger {
     background-color: transparent;
   }
   &__checkbox:checked ~ &__btn &__burger::after {
-    top:0;
+    top: 0;
     transform: rotate(45deg);
   }
-   &__checkbox:checked ~ &__btn &__burger::before {
+  &__checkbox:checked ~ &__btn &__burger::before {
     top: 0;
     transform: rotate(-45deg);
   }
@@ -120,25 +119,76 @@
     &::before,
     &::after {
       content: "";
-    
+
       position: absolute;
       left: 0;
-      transition: all .2s ease-out;
+      transition: all 0.2s ease-out;
     }
 
     &::before {
-      top: -.8rem;
+      top: -0.8rem;
     }
 
     &::after {
-      top: .8rem;
+      top: 0.8rem;
     }
-
-   
   }
   &__btn:hover &__burger::before {
     top: -1rem;
-  } &__btn:hover &__burger::after {
+  }
+  &__btn:hover &__burger::after {
     top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    &__btn {
+      height: 3.5rem;
+      width: 3.5rem;
+
+      top: 4rem;
+      right: 2rem;
+    }
+    &__bg {
+      height: 3rem;
+      width: 3rem;
+
+      top: 4rem;
+      right: 2rem;
+    }
+
+    &__burger {
+      margin-top: 1.75rem;
+
+      &,
+      &::before,
+      &::after {
+        width: 1.5rem;
+        height: 1.25px;
+      }
+
+      &::before {
+        top: -0.5rem !important;
+      }
+
+      &::after {
+        top: 0.5rem !important;
+      }
+    }
+    &__link {
+      &:link,
+      &:visited {
+        font-size: 1.75rem;
+      }
+    }
+    &__checkbox:checked ~ &__btn &__burger::after {
+      top: 0 !important;
+      transform: rotate(45deg);
+    }
+    &__checkbox:checked ~ &__btn &__burger::before {
+      top: 0 !important;
+      transform: rotate(-45deg);
+    }
   }
 }

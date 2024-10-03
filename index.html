@@ -635,8 +635,10 @@
       </div>
     </section> -->
     <script>
+      // selectors
       const navList = document.querySelector(".navigation__list");
       const hamburgerCheckbox = document.getElementById("nav-toggle");
+      // events
       navList.addEventListener("click", () => {
         hamburgerCheckbox.checked = !hamburgerCheckbox.checked;
         console.log(hamburgerCheckbox.checked);

@@ -10,7 +10,7 @@
   box-shadow: $base-box-shadow;
   cursor: pointer;
   transition: 0.2s all ease-out;
-//   for media query change this so all boxes are equal on smaller viewports
+  //   for media query change this so all boxes are equal on smaller viewports
   min-height: 30rem;
 
   &__icon {
@@ -32,6 +32,13 @@
 
   &:hover {
     transform: translateY(-7.5%) scale(1.05);
+  }
+}
 
+@media (max-width: 768px) {
+ 
+  .feature-box {
+    min-height: 10rem;
+    margin: 2rem 0;
   }
 }

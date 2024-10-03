@@ -5,10 +5,10 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.2);
-  background-color: rgba($color-white, .6);
+  background-color: rgba($color-white, 0.6);
   border-radius: $base-border-radius;
   padding: 8rem 8rem 8rem 11rem;
- 
+
   //   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   //   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   transform: skewX(-12deg);
@@ -87,6 +87,21 @@
     &:visited,
     &:active {
       transform: translate(-50%, 0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    width: 90%;
+    margin: 0 auto;
+
+    padding: 4rem;
+
+    transform: skewX(0);
+
+    & > * {
+      transform: skewX(0);
     }
   }
 }
