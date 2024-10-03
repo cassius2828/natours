@@ -1,0 +1,94 @@
+@use "../abstracts/" as *;
+
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &__input {
+    font-family: inherit;
+    font-size: $default-font-size;
+    color: $color-grey-darker;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: solid 3px transparent;
+    width: 90%;
+    display: block;
+    // only works on safari and chrome so far
+    &::-webkit-input-placeholder {
+      color: inherit;
+    }
+
+    &:focus:invalid {
+      border-bottom: solid 3px red;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: solid 3px $color-primary;
+      box-shadow: $base-box-shadow;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $color-grey-darker;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.7rem 0 0 2rem;
+    transition: 0.2s all ease-out;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+  // RADIO BTNS
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-label {
+    position: relative;
+    font-size: $default-font-size;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-btn {
+    position: absolute;
+    top: -0.4rem;
+    left: 0;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    border: solid 5px $color-primary;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      @include absoluteCenter;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+  &__radio-input:checked + &__radio-label &__radio-btn::after {
+    opacity: 1;
+  }
+  .btn {
+    border: none;
+  }
+}

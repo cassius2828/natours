@@ -2,12 +2,12 @@
 @use "../base/" as *;
 
 .feature-box {
-  border-radius: 3px;
+  border-radius: $base-border-radius;
   padding: 2.5rem;
   background-color: rgba($color-white, 0.8);
   font-size: 1.5rem;
   text-align: center;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: $base-box-shadow;
   cursor: pointer;
   transition: 0.2s all ease-out;
 //   for media query change this so all boxes are equal on smaller viewports

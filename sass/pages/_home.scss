@@ -1,11 +1,11 @@
 @use "../abstracts" as *;
-
+// ABOUT
 .section-about {
   background-color: $color-whitesmoke;
   padding: 20rem;
   margin-top: -20vh;
 }
-
+// FEATURES
 .section-features {
   margin-top: -20vh;
   padding: 20rem 2rem;
@@ -14,7 +14,7 @@
   background-position: top;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }
-
+// TOURS
 .section-tours {
   position: relative;
   margin-top: -20vh;
@@ -28,8 +28,36 @@
     animation: none;
   }
 }
-
+// STORIES
 .section-stories {
   position: relative;
   padding: 15rem 2rem;
+}
+// BOOKING
+.section-booking {
+  padding: 15rem 2rem;
+  background: $gradient-primary;
+
+  .book {
+    background-image: $graident-white-to-transparent,
+      url("../../img/nat-10.jpg");
+    background-size: cover;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow;
+    // new gradient technique
+
+    &__form {
+      width: 50%;
+      padding: 6rem;
+    }
+  }
+}
+
+// FOOTER
+.footer {
+  position: relative;
+  background-color: $color-matte-black;
+  // testing
+  min-height: 50rem;
+  padding: 10rem 2rem;
 }

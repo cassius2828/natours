@@ -18,6 +18,44 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <!-- NAVIGATION -->
+    <div id="navigation" class="navigation">
+      <input id="nav-toggle" type="checkbox" class="navigation__checkbox" />
+
+      <label for="nav-toggle" class="navigation__btn">
+        <span class="navigation__burger"></span>
+      </label>
+
+      <div class="navigation__bg">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link"
+              ><span>01</span> about natours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-features" class="navigation__link"
+              ><span>02</span> your benefits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-tours" class="navigation__link"
+              ><span>03</span> popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-stories" class="navigation__link"
+              ><span>04</span> testimonials</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#modal" class="navigation__link"><span>05</span> book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img class="header__logo" src="img/logo-white.png" alt="crown logo" />
@@ -36,7 +74,7 @@
     </header>
     <main>
       <!-- SECTION 1: About -->
-      <section class="section-about">
+      <section id="section-about" class="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -86,7 +124,7 @@
         </div>
       </section>
       <!-- SECTION 2: Features -->
-      <section class="section-features">
+      <section id="section-features" class="section-features">
         <div class="row row-4">
           <div class="col col-1-of-4">
             <div class="feature-box">
@@ -147,7 +185,7 @@
         </div>
       </section>
       <!-- SECTION 3: Tours -->
-      <section class="section-tours">
+      <section id="section-tours" class="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
@@ -196,7 +234,11 @@
                     class="card__back-container--text card__back-container--text-price"
                     >$287</span
                   >
-                  <a class="card__back-container--btn btn btn--white">Book!</a>
+                  <a
+                    href="#modal"
+                    class="card__back-container--btn btn btn--white"
+                    >Book!</a
+                  >
                 </div>
               </div>
             </div>
@@ -244,7 +286,11 @@
                     class="card__back-container--text card__back-container--text-price"
                     >$512</span
                   >
-                  <a class="card__back-container--btn btn btn--white">Book!</a>
+                  <a
+                    href="#modal"
+                    class="card__back-container--btn btn btn--white"
+                    >Book!</a
+                  >
                 </div>
               </div>
             </div>
@@ -292,7 +338,11 @@
                     class="card__back-container--text card__back-container--text-price"
                     >$892</span
                   >
-                  <a class="card__back-container--btn btn btn--white">Book!</a>
+                  <a
+                    href="#modal"
+                    class="card__back-container--btn btn btn--white"
+                    >Book!</a
+                  >
                 </div>
               </div>
             </div>
@@ -302,12 +352,12 @@
       </section>
 
       <!-- SECTION 4: Stories -->
-      <section class="section-stories">
+      <section id="section-stories" class="section-stories">
         <!-- video section -->
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
-            <source src="./img/video.mp4" type="video/mp4">
-            <source src="./img/video.webm" type="video/webm">
+            <source src="./img/video.mp4" type="video/mp4" />
+            <source src="./img/video.webm" type="video/webm" />
             Your browser is not support :/
           </video>
         </div>
@@ -366,11 +416,192 @@
           </div>
         </div>
         <!-- button -->
-        <div class="section-stories__btn-container"><a class="btn__square btn__square--green">Learn More &rarr;</a></div>
+        <div class="section-stories__btn-container">
+          <a class="btn__square btn__square--green">Learn More &rarr;</a>
+        </div>
+      </section>
+      <!-- SECTION 5: Booking -->
+      <section id="section-booking" class="section-booking">
+        <div class="row row__booking">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form__input"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form__input"
+                    placeholder="Email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email</label>
+                </div>
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      name="size"
+                      id="small"
+                      type="radio"
+                      class="form__radio-input"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-btn"></span>
+                      Small tour group
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      name="size"
+                      id="large"
+                      type="radio"
+                      class="form__radio-input"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-btn"></span>
+                      large tour group</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--gradient u-margin-top-medium">
+                    Next step &rarr;
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <!-- FOOTER -->
+    <footer id="section-footer" class="footer">
+      <div class="footer__logo footer__logo-box">
+        <img
+          class="footer__logo footer__logo--img"
+          src="img/logo-green-2x.png"
+          alt="footer logo"
+        />
+      </div>
+      <div class="row row-1 row__footer">
+        <div class="col col-1-of-2">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">company</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">contact us</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">careers</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">privacy policy</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">terms</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-1-of-2">
+          <p class="footer__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            nemo pariatur, velit consequatur error fugiat beatae cum ea
+            voluptas! Nesciunt, odit. Ea sint minima eius totam dolor unde
+            voluptatem quos! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Et autem ut veritatis maiores obcaecati molestias impedit
+            corporis saepe reprehenderit iure nobis, voluptates quam, illo
+            dignissimos minima minus quaerat? Illum, dicta!
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal__content">
+        <div class="modal__side modal__side--left">
+          <img src="img/nat-8.jpg" alt="Tour photo" class="modal__img" />
+          <img src="img/nat-9.jpg" alt="Tour photo" class="modal__img" />
+        </div>
+        <div class="modal__side modal__side--right">
+          <a href="#section-tours" id="close-modal">X</a>
+          <h2
+            class="modal__text modal__text--heading modal__text--heading-main heading-secondary"
+          >
+            Start booking now
+          </h2>
+          <h3
+            class="modal__text modal__text--heading modal__text--heading-sub heading-tertiary"
+          >
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <p class="modal__text modal__text--paragraph">
+            Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aliquid reprehenderit enim non ipsa sunt corporis facere praesentium
+            quas, deleniti quaerat voluptas maxime, sequi, vero neque. Ullam
+            nostrum provident quod reprehenderit! ipsum dolor sit amet
+            consectetur adipisicing elit. Aliquid reprehenderit enim non ipsa
+            sunt corporis facere praesentium quas, deleniti quaerat voluptas
+            maxime, sequi, vero neque. Ullam nostrum provident quod
+            reprehenderit!
+          </p>
 
+          <a href="#" class="btn btn--gradient">Book now</a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="modal">
+      <div class="modal__content">
+        <div class="modal__left">
+          <img src="./img/nat-8.jpg" alt="" class="modal__img modal__img-1" />
+          <img src="./img/nat-9.jpg" alt="" class="modal__img modal__img-2" />
+        </div>
+        <div class="modal__right">
+          <span class="modal__close">x</span>
+          <h2 class="modal__text--title modal__text--title-main">
+            Start booking now
+          </h2>
+          <h3 class="modal__text--title modal__text--title-sub">
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <div class="row row-1">
+            <div class="col col-1-of-2">
+              <p class="modal__text--paragraph modal__text--paragraph-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                corporis quibusdam unde necessitatibus? Veniam, dolorum quas
+                esse eveniet enim voluptates expedita, corrupti eius quam quod,
+                accusamus officia impedit corporis quae. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Dolor optio velit quia harum
+                placeat vero corporis nesciunt. Ut odio incidunt voluptate ipsa,
+                cupiditate blanditiis rem recusandae magni voluptatem in quod.
+              </p>
+            </div>
+            <div class="col col-1-of-2">
+              <p class="modal__text--paragraph modal__text--paragraph-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
+                consequuntur sequi officia assumenda commodi, inventore quaerat
+                provident molestias unde error obcaecati quas recusandae sit hic
+                voluptatibus similique eaque vero? Nobis!
+              </p>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--gradient">Book now</a>
+        </div>
+      </div>
+    </div> -->
     <!-- <section class="test-grid">
       <div class="row row-1">
         <div class="col col-1-of-2">col 1 of 2</div>
