@@ -32,7 +32,7 @@
     display: table;
     overflow: hidden;
     transform: translate(-50%, -50%) scale(0.25);
-    transition: all 0.3s .15s ease-out;
+    transition: all 0.3s 0.15s ease-out;
   }
 
   &:target &__content {
@@ -101,6 +101,22 @@
       -ms-hyphens: auto;
       -webkit-hyphens: auto;
       hyphens: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    &__content {
+      width: 90vw;
+    }
+
+    &:target &__content {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__side--left {
+      display: none;
     }
   }
 }

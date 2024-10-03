@@ -293,8 +293,6 @@ body {
 .card {
   position: relative;
   min-height: 52rem;
-  perspective: 150rem;
-  -moz-perspective: 150rem;
 }
 .card__side {
   position: absolute;
@@ -326,6 +324,10 @@ body {
 }
 .card__side--back-3 {
   background: linear-gradient(135deg, #2998ff, #5643fa);
+}
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
 }
 .card:hover .card__side--front {
   transform: rotateY(180deg);
@@ -450,6 +452,7 @@ body {
 .front-card-container__description ul li:not(:last-child) {
   border-bottom: solid 1px #777;
 }
+
 @media (max-width: 768px) {
   .card {
     min-height: 50vh;
@@ -722,6 +725,17 @@ body {
   hyphens: auto;
 }
 
+@media (max-width: 768px) {
+  .modal__content {
+    width: 90vw;
+  }
+  .modal:target .modal__content {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal__side--left {
+    display: none;
+  }
+}
 .story {
   position: relative;
   width: 75%;
