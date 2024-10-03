@@ -51,7 +51,9 @@
             >
           </li>
           <li class="navigation__item">
-            <a href="#modal" class="navigation__link"><span>05</span> book now</a>
+            <a href="#modal" class="navigation__link"
+              ><span>05</span> book now</a
+            >
           </li>
         </ul>
       </nav>
@@ -632,5 +634,13 @@
         <div class="col col-3-of-4">col 2 of 2</div>
       </div>
     </section> -->
+    <script>
+      const navList = document.querySelector(".navigation__list");
+      const hamburgerCheckbox = document.getElementById("nav-toggle");
+      navList.addEventListener("click", () => {
+        hamburgerCheckbox.checked = !hamburgerCheckbox.checked;
+        console.log(hamburgerCheckbox.checked);
+      });
+    </script>
   </body>
 </html>
